@@ -1,0 +1,32 @@
+.header-container {
+    background-color: #181818;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin: 0px;
+    padding: 20px 20px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+}
+
+.search-icon {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-left: auto;
+}
+
+hr {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #FFFFFF;
+}

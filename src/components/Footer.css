@@ -1,0 +1,10 @@
+.footer-container {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.footer-content {
+    color: #B8B8B8;
+    font-family: 'Poppins';
+    font-size: 10px;
+    padding-left: 10px;
+}

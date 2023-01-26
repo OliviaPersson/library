@@ -1,0 +1,53 @@
+.main-content-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.movies-container {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.card-container {
+    color: #FFFFFF;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-data {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 5px;
+    
+}
+
+.title {
+    margin: 0px;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.author {
+    margin: 0px;
+    font-size: 9px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+img {
+    width: 130px;
+    border-radius: 4px;
+}
