@@ -5,11 +5,25 @@ function NavBar() {
     <div className="navbar-container">
       <p className="user">Olivia Persson</p>
       <hr />
-      <div className="nav-list">
-        <p className="nav-item">New Realeases</p>
-        <p className="nav-item">Best Sellers</p>
-        <p className="nav-item">My Wishlist</p>
-      </div>
+      <nav class="nav-list">
+        <ul>
+          <li>
+            <p className="nav-item">New Realeases</p>
+          </li>
+          <li>
+            <p className="nav-item">Coming Soon</p>
+          </li>
+          <li>
+            <p className="nav-item">Books</p>
+          </li>
+          <li>
+            <p className="nav-item">Best Sellers</p>
+          </li>
+          <li>
+            <p className="nav-item">My Wishlist</p>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

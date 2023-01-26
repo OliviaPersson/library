@@ -19,10 +19,22 @@ hr {
     font-family: 'Playfair Display', serif;
 }
 
+ul {
+    padding: 0px;
+}
+ 
+li {
+    list-style: none;
+}
+
 .nav-item {
     margin: 0px;
     cursor: pointer;
     margin-bottom: 17px;
     font-size: 14px;
     font-family: 'Playfair Display', serif;
+}
+
+.nav-item:hover {
+    color: #555;
 }
