@@ -6,10 +6,14 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  function handleChange() {
+    console.log("Search");
+  }
+
   return (
     <div className="app-container">
       <NavBar />
-      <Header />
+      <Header handleChange={handleChange} />
       <MainContent />
       <Footer />
     </div>
