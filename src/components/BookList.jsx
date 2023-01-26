@@ -1,7 +1,7 @@
 import React from "react";
-import "./MainContent.css";
+import "./BookList.css";
 
-function MainContent() {
+function BookList() {
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
@@ -37,4 +37,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default BookList;
