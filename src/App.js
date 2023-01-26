@@ -19,10 +19,10 @@ function App() {
         <NavBar />
         <Header handleChange={handleChange} />
         <Routes>
-          <Route path="/movies" element={<BookList />}></Route>
-          <Route path="/:id" element={<BookDetailPage />}></Route>
+          <Route path="/books" element={<BookList />}></Route>
+          <Route path="/books/:id" element={<BookDetailPage />}></Route>
           <Route path="/not-found" component={NotFound}></Route>
-          <Route path="/" element={<Navigate replace to="/movies" />} />
+          <Route path="/" element={<Navigate replace to="/books" />} />
         </Routes>
         <Footer />
       </div>
