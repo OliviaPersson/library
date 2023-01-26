@@ -13,7 +13,11 @@ hr {
 .movies-container {
     padding: 20px;
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card-container {
@@ -21,17 +25,15 @@ hr {
     cursor: pointer;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }
 
 .book-data {
     display: flex;
     text-align: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 15px;
     gap: 5px;
-    
 }
 
 .title {
@@ -48,6 +50,8 @@ hr {
 }
 
 .book-image {
-    width: 130px;
+    width: 120px;
     border-radius: 10px;
+    margin: auto;
+    display: block;
 }
