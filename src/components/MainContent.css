@@ -47,7 +47,7 @@ hr {
     letter-spacing: 1px;
 }
 
-img {
+.book-image {
     width: 130px;
-    border-radius: 4px;
+    border-radius: 10px;
 }

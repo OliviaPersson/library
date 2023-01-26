@@ -1,3 +1,4 @@
+import React from "react";
 import MainContent from "./components/MainContent";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";

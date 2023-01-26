@@ -1,18 +1,37 @@
+import React from "react";
 import "./MainContent.css";
-import theWish from "../images/the-wish.png";
 
 function MainContent() {
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("http://localhost:3000/data.json")
+      .then((response) => response.json())
+      .then((data) => setData({ data }))
+      .catch(function (err) {
+        console.log(err);
+      });
+  }, []);
+
+  data.data?.map((bookData) => {
+    console.log(bookData);
+  });
+
   return (
     <div className="main-content-container">
       <hr />
       <div className="movies-container">
-        <div className="card-container">
-          <img src={theWish} />
-          <div className="book-data">
-            <p className="title">Things Fall Apart</p>
-            <p className="author">Chinua Achebe</p>
-          </div>
-        </div>
+        {data.data?.map((bookData) => {
+          return (
+            <div key={bookData.id} className="card-container">
+              <img className="book-image" src={bookData.imageLink} />
+              <div className="book-data">
+                <p className="title">{bookData.title}</p>
+                <p className="author">{bookData.author}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
