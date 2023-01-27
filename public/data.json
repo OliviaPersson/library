@@ -9,7 +9,7 @@
     "title": "Verity",
     "year": 2022,
     "releaseDate": "2022-01-20",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781408726600"
   },
   {
@@ -22,7 +22,7 @@
     "title": "Ugly Love",
     "year": 2014,
     "releaseDate": "2014-08-05",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471136726"
   },
   {
@@ -35,7 +35,7 @@
     "title": "Reminders of Him",
     "year": 2022,
     "releaseDate": "2022-01-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781542025607"
   },
   {
@@ -48,7 +48,7 @@
     "title": "November 9",
     "year": 2015,
     "releaseDate": "2015-11-10",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471154621"
   },
   {
@@ -61,7 +61,7 @@
     "title": "It Starts with Us",
     "year": 2022,
     "releaseDate": "2022-10-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781398518179"
   },
   {
@@ -74,7 +74,7 @@
     "title": "It Ends With Us",
     "year": 2016,
     "releaseDate": "2016-08-02",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471156267"
   },
   {
@@ -87,7 +87,7 @@
     "title": "Maybe Someday",
     "year": 2014,
     "releaseDate": "2014-03-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471135514"
   },
   {
@@ -100,7 +100,7 @@
     "title": "Regretting You",
     "year": 2019,
     "releaseDate": "2019-12-10",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781542016421"
   },
   {
@@ -113,7 +113,7 @@
     "title": "Verity",
     "year": 2022,
     "releaseDate": "2022-01-20",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781408726600"
   },
   {
@@ -126,7 +126,7 @@
     "title": "Ugly Love",
     "year": 2014,
     "releaseDate": "2014-08-05",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471136726"
   },
   {
@@ -139,7 +139,7 @@
     "title": "Reminders of Him",
     "year": 2022,
     "releaseDate": "2022-01-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781542025607"
   },
   {
@@ -152,7 +152,7 @@
     "title": "November 9",
     "year": 2015,
     "releaseDate": "2015-11-10",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471154621"
   },
   {
@@ -165,7 +165,7 @@
     "title": "It Starts with Us",
     "year": 2022,
     "releaseDate": "2022-10-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781398518179"
   },
   {
@@ -178,7 +178,7 @@
     "title": "It Ends With Us",
     "year": 2016,
     "releaseDate": "2016-08-02",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471156267"
   },
   {
@@ -191,7 +191,7 @@
     "title": "Maybe Someday",
     "year": 2014,
     "releaseDate": "2014-03-18",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781471135514"
   },
   {
@@ -204,7 +204,7 @@
     "title": "Regretting You",
     "year": 2019,
     "releaseDate": "2019-12-10",
-    "Format": "Pocket",
+    "format": "Pocket",
     "ISBN": "9781542016421"
   }
 ]

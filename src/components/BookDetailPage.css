@@ -1,0 +1,83 @@
+.book-page-container {
+    padding: 40px 80px;
+    background-color: #181818;
+}
+
+.book-summary {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 180px; 
+    height: 280px;
+    border-radius: 4px;
+    margin-right: 40px;
+
+}
+
+.book-data {
+    color: #FFFFFF;
+    margin: 0px;
+    text-align: left;
+}
+
+.book-title {
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.author {
+    font-family: 'Poppins';
+    margin: 10px 0px 0px 0px;
+}
+
+.description-heading {
+    margin: 30px 0px 0px 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+}
+
+.description {
+    margin: 0px;
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+.book-details-container {
+    color: #FFFFFF;
+    display: flex;
+    margin-top: 60px;
+}
+
+.book-details-header {
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.book-details {
+    min-width: 140px;
+    font-size: 13px;
+}
+
+.book-details > p {
+    margin: 10px 0px 0px 0px;
+    font-size: 10px;
+    font-family: 'Poppins';
+}
+
+.author-description-container {
+    margin-left: 80px;
+}
+
+.about-author-header {
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+}
+
+.author-description {
+    margin: 12px 0px 0px 0px;
+    font-size: 10px;
+    font-family: 'Poppins';
+}

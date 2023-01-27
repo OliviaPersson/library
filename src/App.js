@@ -9,6 +9,17 @@ import BookDetailPage from "./components/BookDetailPage";
 import "./App.css";
 
 function App() {
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("http://localhost:3000/data.json")
+      .then((response) => response.json())
+      .then((data) => setData({ data }))
+      .catch(function (err) {
+        console.log(err);
+      });
+  }, []);
+
   function handleChange() {
     console.log("Search");
   }
@@ -19,10 +30,13 @@ function App() {
         <NavBar />
         <Header handleChange={handleChange} />
         <Routes>
-          <Route path="/books" element={<BookList />}></Route>
-          <Route path="/books/:id" element={<BookDetailPage />}></Route>
+          <Route path="/books" element={<BookList books={data.data} />}></Route>
+          <Route
+            path="/books/:id"
+            element={<BookDetailPage books={data.data} />}
+          ></Route>
           <Route path="/not-found" component={NotFound}></Route>
-          <Route path="/" element={<Navigate replace to="/books" />} />
+          <Route path="/" element={<Navigate replace exact to="/books" />} />
         </Routes>
         <Footer />
       </div>
