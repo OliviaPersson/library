@@ -30,6 +30,7 @@
 .author {
     font-family: 'Poppins';
     margin: 10px 0px 0px 0px;
+    font-size: 12px;
 }
 
 .description-heading {
@@ -39,7 +40,7 @@
 }
 
 .description {
-    margin: 0px;
+    margin: 10px 0px 0px 00px;
     font-family: 'Poppins';
     font-size: 12px;
 }

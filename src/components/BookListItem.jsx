@@ -4,7 +4,7 @@ import "./BookListItem.css";
 function BookListItem({ book }) {
   return (
     <div className="card-container">
-      <Link to={book.id}>
+      <Link to={`/book/${book.id}`}>
         <img className="book-image" src={book.imageLink} />
       </Link>
       <div className="book-data">

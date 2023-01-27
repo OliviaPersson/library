@@ -25,14 +25,15 @@ ul {
  
 li {
     list-style: none;
+    margin: 0px 0px 17px 0px;
 }
 
 .nav-item {
-    margin: 0px;
     cursor: pointer;
-    margin-bottom: 17px;
     font-size: 14px;
     font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .nav-item:hover {
