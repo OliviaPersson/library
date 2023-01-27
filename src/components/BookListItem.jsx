@@ -9,7 +9,7 @@ function BookListItem({ book }) {
       </Link>
       <div className="book-data">
         <p className="title">{book.title}</p>
-        <p className="author">{book.author}</p>
+        <p className="author-header">{book.author}</p>
       </div>
     </div>
   );

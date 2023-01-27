@@ -8,6 +8,7 @@ function Header({ handleChange }) {
         <p className="header-logo">Bookly</p>
         <SearchBox handleChange={handleChange} />
       </div>
+      <hr className="header-line" />
     </div>
   );
 }

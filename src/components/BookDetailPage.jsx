@@ -11,7 +11,7 @@ function BookDetailPage({ books }) {
     <div className="book-page-container">
       <div className="book-summary">
         <img className="image" src={book.imageLink} />
-        <div className="book-data">
+        <div className="book-data-text">
           <h1 className="book-title">{book.title}</h1>
           <p className="author">by {book.author}</p>
           <h3 className="description-heading">Description</h3>
@@ -26,6 +26,7 @@ function BookDetailPage({ books }) {
           </p>
         </div>
       </div>
+      <hr className="detail-page-line" />
       <div className="book-details-container">
         <div className="book-details">
           <h4 className="book-details-header">Book Details</h4>

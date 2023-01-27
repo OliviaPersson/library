@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <div className="navbar-container">
       <p className="user">Olivia Persson</p>
-      <hr />
+      <hr className="navbar-line" />
       <nav className="nav-list">
         <ul>
           <li>

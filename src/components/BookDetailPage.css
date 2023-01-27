@@ -16,9 +16,9 @@
 
 }
 
-.book-data {
+.book-data-text {
     color: #FFFFFF;
-    margin: 0px;
+    margin: 10px 0px 0px 0px;
     text-align: left;
 }
 
@@ -42,6 +42,13 @@
     margin: 0px;
     font-family: 'Poppins';
     font-size: 12px;
+}
+
+.detail-page-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    margin-top: 30px;
 }
 
 .book-details-container {

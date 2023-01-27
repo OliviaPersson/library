@@ -5,7 +5,7 @@
     grid-area: 1 / 1 / 4 / 2;
 }
 
-hr {
+.navbar-line {
     border-top: none;
     border-right: none;
     border-left: none;
