@@ -5,13 +5,6 @@
     background-color: #181818;
 }
 
-.main-page-header {
-    color: #FFFFFF;
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    margin: 20px 0px 0px 35px;
-}
-
 .books-container {
     padding: 40px 20px;
     display: flex;
