@@ -1,29 +1,24 @@
 import { useParams } from "react-router-dom";
+import Save from "./common/Save";
 import "./BookDetailPage.css";
 
-function BookDetailPage({ books }) {
+function BookDetailPage({ books, handleSave }) {
   const { id } = useParams();
 
-  const book = books?.find((book) => book.id === id);
-  console.log(book);
+  const book = books.find((book) => book.id === id);
 
   return (
     <div className="book-page-container">
       <div className="book-summary">
         <img className="image" src={book.imageLink} />
         <div className="book-data-text">
-          <h1 className="book-title">{book.title}</h1>
+          <div className="book-title-container">
+            <h1 className="book-title">{book.title}</h1>
+            <Save onClick={() => handleSave(book.id)} isSaved={book.isSaved} />
+          </div>
           <p className="author">by {book.author}</p>
           <h3 className="description-heading">Description</h3>
-          <p className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <p className="description">{book.description}</p>
         </div>
       </div>
       <hr className="detail-page-line" />

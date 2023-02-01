@@ -17,22 +17,16 @@ function NavBar() {
         <i className="fa fa-bars" aria-hidden="true" onClick={toggle} />
         <ul>
           <NavLink className="nav-item" to="/">
-            <li>Home</li>
+            <li>My Books</li>
           </NavLink>
-          <NavLink className="nav-item" to="/new-releases">
-            <li>New Releases</li>
+          <NavLink className="nav-item" to="/currently-reading">
+            <li>Currently Reading</li>
           </NavLink>
-          <NavLink className="nav-item" to="/coming-soon">
-            <li>Coming Soon</li>
+          <NavLink className="nav-item" to="/read">
+            <li>Read</li>
           </NavLink>
-          <NavLink className="nav-item" to="/books">
-            <li>Books</li>
-          </NavLink>
-          <NavLink className="nav-item" to="/best-sellers">
-            <li>Best Sellers</li>
-          </NavLink>
-          <NavLink className="nav-item" to="/my-wishlist">
-            <li>My Wishlist</li>
+          <NavLink className="nav-item" to="/favourites">
+            <li>Favourites</li>
           </NavLink>
         </ul>
       </nav>

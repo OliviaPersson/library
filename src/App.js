@@ -1,13 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
+import MyBooks from "./components/navbar/navBarComponents/MyBooks";
+import CurrentlyReading from "./components/navbar/navBarComponents/CurrentlyReading";
+import Read from "./components/navbar/navBarComponents/Read";
+import Favourites from "./components/navbar/navBarComponents/Favourites";
 import BookDetailPage from "./components/BookDetailPage";
-import NewReleases from "./components/navBarComponents/NewReleasesPage";
-import ComingSoon from "./components/navBarComponents/ComingSoonPage";
-import HomePage from "./components/HomePage";
 import "./App.css";
 
 function App() {
@@ -22,28 +23,38 @@ function App() {
       });
   }, []);
 
-  function handleChange() {
-    console.log("Search");
+  function handleSave(id) {
+    setData((prevState) => {
+      return {
+        data: prevState.data.map((obj) => {
+          return obj.id === id ? { ...obj, isSaved: !obj.isSaved } : obj;
+        }),
+      };
+    });
   }
 
   return (
     <React.Fragment>
       <div className="app-container">
         <NavBar />
-        <Header handleChange={handleChange} />
+        <Header />
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/" element={<MyBooks books={data.data} />}></Route>
           <Route
-            path="/new-releases"
-            element={<NewReleases books={data.data} />}
+            path="/currently-reading"
+            element={<CurrentlyReading />}
           ></Route>
-          <Route path="/coming-soon" element={<ComingSoon />}></Route>
+          <Route path="/read" element={<Read />}></Route>
+          <Route path="/favourites" element={<Favourites />}></Route>
           <Route
             path="/book/:id"
-            element={<BookDetailPage books={data.data} />}
+            element={
+              data.length !== 0 ? (
+                <BookDetailPage books={data.data} handleSave={handleSave} />
+              ) : null
+            }
           ></Route>
           <Route path="/not-found" component={NotFound}></Route>
-          {/* <Route path="/" element={<Navigate replace exact to="/books" />} /> */}
         </Routes>
         <Footer />
       </div>

@@ -13,13 +13,18 @@
     height: 280px;
     border-radius: 4px;
     margin-right: 40px;
-
 }
 
 .book-data-text {
     color: #FFFFFF;
     margin: 10px 0px 0px 0px;
     text-align: left;
+}
+
+.book-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .book-title {
