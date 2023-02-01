@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { Context } from "./context";
 import Header from "./components/Header";
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/Footer";
@@ -38,24 +39,27 @@ function App() {
       <div className="app-container">
         <NavBar />
         <Header />
-        <Routes>
-          <Route path="/" element={<MyBooks books={data.data} />}></Route>
-          <Route
-            path="/currently-reading"
-            element={<CurrentlyReading />}
-          ></Route>
-          <Route path="/read" element={<Read />}></Route>
-          <Route path="/favourites" element={<Favourites />}></Route>
-          <Route
-            path="/book/:id"
-            element={
-              data.length !== 0 ? (
-                <BookDetailPage books={data.data} handleSave={handleSave} />
-              ) : null
-            }
-          ></Route>
-          <Route path="/not-found" component={NotFound}></Route>
-        </Routes>
+        <Context.Provider value={data.data}>
+          <Routes>
+            <Route path="/" element={<MyBooks />}></Route>
+            <Route
+              path="/currently-reading"
+              element={<CurrentlyReading />}
+            ></Route>
+            <Route path="/read" element={<Read />}></Route>
+            <Route path="/favourites" element={<Favourites />}></Route>
+            <Route
+              path="/book/:id"
+              element={
+                data.length !== 0 ? (
+                  <BookDetailPage handleSave={handleSave} />
+                ) : null
+              }
+            ></Route>
+
+            <Route path="/not-found" component={NotFound}></Route>
+          </Routes>
+        </Context.Provider>
         <Footer />
       </div>
     </React.Fragment>

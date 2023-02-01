@@ -1,9 +1,12 @@
+import React from "react";
 import { useParams } from "react-router-dom";
+import { Context } from "../context";
 import Save from "./common/Save";
 import "./BookDetailPage.css";
 
-function BookDetailPage({ books, handleSave }) {
+function BookDetailPage({ handleSave }) {
   const { id } = useParams();
+  const books = React.useContext(Context);
 
   const book = books.find((book) => book.id === id);
 
