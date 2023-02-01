@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Route, Routes } from "react-router-dom";
 import { Context } from "./context";
 import Header from "./components/Header";
@@ -16,22 +17,17 @@ function App() {
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("http://localhost:3000/data.json")
-      .then((response) => response.json())
-      .then((data) => setData({ data }))
-      .catch(function (err) {
-        console.log(err);
-      });
+    axios.get("http://localhost:3000/data.json").then((response) => {
+      setData(response.data);
+    });
   }, []);
 
   function handleSave(id) {
-    setData((prevState) => {
-      return {
-        data: prevState.data.map((obj) => {
-          return obj.id === id ? { ...obj, isSaved: !obj.isSaved } : obj;
-        }),
-      };
-    });
+    setData((prevState) =>
+      prevState.map((obj) =>
+        obj.id === id ? { ...obj, isSaved: !obj.isSaved } : obj
+      )
+    );
   }
 
   return (
@@ -39,7 +35,7 @@ function App() {
       <div className="app-container">
         <NavBar />
         <Header />
-        <Context.Provider value={data.data}>
+        <Context.Provider value={data}>
           <Routes>
             <Route path="/" element={<MyBooks />}></Route>
             <Route
@@ -56,7 +52,6 @@ function App() {
                 ) : null
               }
             ></Route>
-
             <Route path="/not-found" component={NotFound}></Route>
           </Routes>
         </Context.Provider>
