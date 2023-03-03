@@ -1,13 +1,13 @@
 import BookList from "../../bookList/BookList";
-import "./MyBooks.css";
+import "./MyBookshelf.css";
 
-function MyBooks() {
+function MyBookshelf() {
   return (
     <div className="page-content-container">
-      <h1 className="page-header">My Books</h1>
+      <h1 className="page-header">My Bookshelf</h1>
       <BookList />
     </div>
   );
 }
 
-export default MyBooks;
+export default MyBookshelf;

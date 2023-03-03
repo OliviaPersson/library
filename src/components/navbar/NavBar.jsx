@@ -17,7 +17,7 @@ function NavBar() {
         <i className="fa fa-bars" aria-hidden="true" onClick={toggle} />
         <ul>
           <NavLink className="nav-item" to="/">
-            <li>My Books</li>
+            <li>My Bookshelf</li>
           </NavLink>
           <NavLink className="nav-item" to="/currently-reading">
             <li>Currently Reading</li>

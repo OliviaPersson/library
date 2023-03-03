@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-import MyBooks from "./components/navbar/navBarComponents/MyBooks";
+import MyBookshelf from "./components/navbar/navBarComponents/MyBookshelf";
 import CurrentlyReading from "./components/navbar/navBarComponents/CurrentlyReading";
 import Read from "./components/navbar/navBarComponents/Read";
 import Favourites from "./components/navbar/navBarComponents/Favourites";
@@ -37,7 +37,7 @@ function App() {
         <Header />
         <Context.Provider value={data}>
           <Routes>
-            <Route path="/" element={<MyBooks />}></Route>
+            <Route path="/" element={<MyBookshelf />}></Route>
             <Route
               path="/currently-reading"
               element={<CurrentlyReading />}

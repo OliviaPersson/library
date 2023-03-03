@@ -1,4 +1,5 @@
 import React from "react";
+import BookStatus from "./common/BookStatus";
 import { useParams } from "react-router-dom";
 import { Context } from "../context";
 import Save from "./common/Save";
@@ -17,7 +18,8 @@ function BookDetailPage({ handleSave }) {
         <div className="book-data-text">
           <div className="book-title-container">
             <h1 className="book-title">{book.title}</h1>
-            <Save onClick={() => handleSave(book.id)} isSaved={book.isSaved} />
+            <BookStatus />
+            {/* <Save onClick={() => handleSave(book.id)} isSaved={book.isSaved} /> */}
           </div>
           <p className="author">by {book.author}</p>
           <h3 className="description-heading">Description</h3>

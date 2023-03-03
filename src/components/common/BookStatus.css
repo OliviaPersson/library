@@ -1,0 +1,79 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: auto;
+}
+
+.dropbtn {
+    background-color: #272727;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    font-size: 11px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #3B3B3B;
+} 
+
+.dropdown-content {
+    padding: 9px 12px;
+    display: none;
+    position: absolute;
+    background-color: #272727;
+    font-family: 'Poppins';
+    font-size: 11px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-item {
+    display: flex;
+}
+
+.dropdown-item > .status-label {
+    display: flex;
+}
+
+.dropdown-item > .status-label > .radio-button {
+    margin-right: 7px;
+    margin-bottom: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    /* background-color: #3B3B3B; */
+} 
+
+.dropdown-item:hover > .status-label  {
+    /* background-color: #3B3B3B; */
+    cursor: pointer;
+    font-size: 12px;
+} 
+
+.submit-button:hover > .submit {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #272727;
+} 
+
+.submit-button > .submit {
+    cursor: pointer;
+    margin-top: 6px;
+    border-radius: 2px;
+    border: 1px solid #FFFFFF;
+    font-family: 'Poppins';
+    padding: 1px 4px;
+    font-size: 11px;
+    background-color: transparent;
+    color: #FFFFFF;
+}
