@@ -1,11 +1,24 @@
+import React from "react";
 import "./BookStatus.css";
 
 function BookStatus() {
+  //   const [bookStatus, setBookStatus] = React.useState("");
+
+  //   const handleOptionChange = (e) => {
+  //     setBookStatus(e.target.value);
+  //   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //setBookStatus(e.target.value);
+    //console.log(bookStatus);
+  };
+
   return (
     <div className="dropdown">
       <button className="dropbtn">Want To Read</button>
       <div className="dropdown-content">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="dropdown-item">
             <label className="status-label">
               <input
@@ -14,6 +27,8 @@ function BookStatus() {
                 id="wanttoread"
                 name="radio"
                 value="WantToRead"
+                // checked={bookStatus === "WantToRead"}
+                // onChange={handleOptionChange}
               />
               Want To Read
             </label>
@@ -26,6 +41,8 @@ function BookStatus() {
                 id="currentlyreading"
                 name="radio"
                 value="CurrentlyReading"
+                // checked={bookStatus === "CurrentlyReading"}
+                // onChange={handleOptionChange}
               />
               Currently Reading
             </label>
@@ -38,6 +55,8 @@ function BookStatus() {
                 id="read"
                 name="radio"
                 value="Read"
+                // checked={bookStatus === "Read"}
+                // onChange={handleOptionChange}
               />
               Read
             </label>
