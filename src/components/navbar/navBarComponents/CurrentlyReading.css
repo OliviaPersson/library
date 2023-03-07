@@ -1,6 +1,8 @@
 .page-header {
     color: #FFFFFF;
+    background-color: #181818;
     font-family: 'Playfair Display', serif;
     font-size: 18px;
-    margin: 20px 0px 0px 35px;
+    padding: 20px 0px 0px 35px;
+    margin: 0px;
 }

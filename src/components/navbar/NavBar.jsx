@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
@@ -11,7 +11,9 @@ function NavBar() {
 
   return (
     <div className="navbar-container">
-      <div className="profile-image"></div>
+      <Link to="/profile">
+        <div className="profile-image"></div>
+      </Link>
       <p className="user">Olivia Persson</p>
       <hr className="navbar-line" />
       <nav className="nav-list">

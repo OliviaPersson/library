@@ -14,6 +14,7 @@ import { Context } from "./context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -101,6 +102,16 @@ function App() {
             <Route
               path="/"
               element={<MyBookshelf books={wantToReadBooks} />}
+            ></Route>
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  wantToReadBooks={wantToReadBooks}
+                  currentlyReadingBooks={currentlyReadingBooks}
+                  readBooks={readBooks}
+                />
+              }
             ></Route>
             <Route
               path="/currently-reading"
