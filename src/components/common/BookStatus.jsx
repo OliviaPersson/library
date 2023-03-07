@@ -11,7 +11,6 @@ function BookStatus({ book, handleStatusChange }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleStatusChange(book, bookStatus);
-    console.log(bookStatus);
   };
 
   return (

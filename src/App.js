@@ -20,6 +20,7 @@ function App() {
   const [wantToReadBooks, setWantToReadBooks] = React.useState([]);
   const [currentlyReadingBooks, setCurrentlyReadingBooks] = React.useState([]);
   const [readBooks, setReadBooks] = React.useState([]);
+  const [error, setError] = React.useState();
 
   React.useEffect(() => {
     axios.get("https://localhost:7101/api/Books").then((response) => {
@@ -40,7 +41,7 @@ function App() {
         })
       );
     });
-  }, []);
+  });
 
   function handleSave(id) {
     setData((prevState) =>
@@ -73,13 +74,19 @@ function App() {
     axios
       .put(`https://localhost:7101/api/Books/${book.id}`, data)
       .then((response) => {
+        console.log(response.data);
+        // setData((prevState) =>
+        //   prevState.map((book) =>
+        //     book.id === response.data.id ? response.data : book
+        //   )
+        // );
         toast.success("Changes saved successfully!", {
           className: "toast-message",
           hideProgressBar: true,
         });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((e) => {
+        setError(e.message);
       });
   }
 
