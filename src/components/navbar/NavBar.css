@@ -15,8 +15,22 @@
     margin-top: 30px;
 }
 
+.profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../images/profile-image.jpg');
+}
+
 .user {
     font-family: 'Playfair Display', serif;
+    text-align: center;
 }
 
 ul {

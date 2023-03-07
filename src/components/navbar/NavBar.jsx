@@ -11,6 +11,7 @@ function NavBar() {
 
   return (
     <div className="navbar-container">
+      <div className="profile-image"></div>
       <p className="user">Olivia Persson</p>
       <hr className="navbar-line" />
       <nav className="nav-list">
