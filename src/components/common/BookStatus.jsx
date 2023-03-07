@@ -1,17 +1,17 @@
 import React from "react";
 import "./BookStatus.css";
 
-function BookStatus() {
-  //   const [bookStatus, setBookStatus] = React.useState("");
+function BookStatus({ book, handleStatusChange }) {
+  const [bookStatus, setBookStatus] = React.useState(book.status);
 
-  //   const handleOptionChange = (e) => {
-  //     setBookStatus(e.target.value);
-  //   };
+  const handleOptionChange = (e) => {
+    setBookStatus(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //setBookStatus(e.target.value);
-    //console.log(bookStatus);
+    handleStatusChange(book, bookStatus);
+    console.log(bookStatus);
   };
 
   return (
@@ -27,8 +27,8 @@ function BookStatus() {
                 id="wanttoread"
                 name="radio"
                 value="WantToRead"
-                // checked={bookStatus === "WantToRead"}
-                // onChange={handleOptionChange}
+                checked={bookStatus === "WantToRead"}
+                onChange={handleOptionChange}
               />
               Want To Read
             </label>
@@ -41,8 +41,8 @@ function BookStatus() {
                 id="currentlyreading"
                 name="radio"
                 value="CurrentlyReading"
-                // checked={bookStatus === "CurrentlyReading"}
-                // onChange={handleOptionChange}
+                checked={bookStatus === "CurrentlyReading"}
+                onChange={handleOptionChange}
               />
               Currently Reading
             </label>
@@ -55,8 +55,8 @@ function BookStatus() {
                 id="read"
                 name="radio"
                 value="Read"
-                // checked={bookStatus === "Read"}
-                // onChange={handleOptionChange}
+                checked={bookStatus === "Read"}
+                onChange={handleOptionChange}
               />
               Read
             </label>

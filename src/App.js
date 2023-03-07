@@ -20,7 +20,7 @@ function App() {
   const [readBooks, setReadBooks] = React.useState([]);
 
   React.useEffect(() => {
-    axios.get("http://localhost:3000/data.json").then((response) => {
+    axios.get("https://localhost:7101/api/Books").then((response) => {
       setData(response.data);
       setWantToReadBooks(
         response.data.filter((book) => {
@@ -40,10 +40,6 @@ function App() {
     });
   }, []);
 
-  //console.log(wantToReadBooks);
-  // console.log(currentlyReadingBooks);
-  // console.log(readBooks);
-
   function handleSave(id) {
     setData((prevState) =>
       prevState.map((obj) =>
@@ -52,7 +48,33 @@ function App() {
     );
   }
 
-  function handleStatusChange(bookId, status) {}
+  function handleStatusChange(book, bookStatus) {
+    const data = {
+      id: book.id,
+      author: book.author,
+      imageLink: book.imageLink,
+      language: book.language,
+      link: book.link,
+      pages: book.pages,
+      title: book.title,
+      year: book.year,
+      releaseDate: book.releaseDate,
+      format: book.format,
+      ISBN: book.ISBN,
+      isSaved: book.isSaved,
+      status: bookStatus,
+      description: book.description,
+    };
+
+    console.log(data);
+
+    axios
+      .put(`https://localhost:7101/api/Books/${book.id}`, data)
+      .then((response) => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <React.Fragment>

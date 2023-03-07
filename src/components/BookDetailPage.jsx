@@ -5,7 +5,7 @@ import { Context } from "../context";
 import Save from "./common/Save";
 import "./BookDetailPage.css";
 
-function BookDetailPage({ handleSave }) {
+function BookDetailPage({ handleSave, handleStatusChange }) {
   const { id } = useParams();
   const books = React.useContext(Context);
 
@@ -18,7 +18,7 @@ function BookDetailPage({ handleSave }) {
         <div className="book-data-text">
           <div className="book-title-container">
             <h1 className="book-title">{book.title}</h1>
-            <BookStatus />
+            <BookStatus book={book} handleStatusChange={handleStatusChange} />
             {/* <Save onClick={() => handleSave(book.id)} isSaved={book.isSaved} /> */}
           </div>
           <p className="author">by {book.author}</p>
