@@ -1,7 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { Route, Routes } from "react-router-dom";
-import { Context } from "./context";
 import Header from "./components/Header";
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/Footer";
@@ -11,6 +9,10 @@ import CurrentlyReading from "./components/navbar/navBarComponents/CurrentlyRead
 import Read from "./components/navbar/navBarComponents/Read";
 import Favourites from "./components/navbar/navBarComponents/Favourites";
 import BookDetailPage from "./components/BookDetailPage";
+import { Route, Routes } from "react-router-dom";
+import { Context } from "./context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 function App() {
@@ -70,7 +72,12 @@ function App() {
 
     axios
       .put(`https://localhost:7101/api/Books/${book.id}`, data)
-      .then((response) => {})
+      .then((response) => {
+        toast.success("Changes saved successfully!", {
+          className: "toast-message",
+          hideProgressBar: true,
+        });
+      })
       .catch((error) => {
         console.log(error);
       });
@@ -78,6 +85,7 @@ function App() {
 
   return (
     <React.Fragment>
+      <ToastContainer />
       <div className="app-container">
         <NavBar />
         <Header />

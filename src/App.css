@@ -7,3 +7,11 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
+
+.toast-message {
+    background: #d4edda;
+    color: #376e37;
+    font-size: 12px;
+    width: 20vw;
+    padding: 10px 10px;
+}
