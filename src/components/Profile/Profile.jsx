@@ -8,7 +8,9 @@ function Profile({ wantToReadBooks, currentlyReadingBooks, readBooks }) {
     <div className="my-profile">
       <h1 className="my-profile-header">My Profile</h1>
       <MyBookshelf books={wantToReadBooks} />
+      <hr />
       <CurrentlyReading books={currentlyReadingBooks} />
+      <hr />
       <Read books={readBooks} />
     </div>
   );

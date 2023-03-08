@@ -9,12 +9,14 @@ import CurrentlyReading from "./components/navbar/navBarComponents/CurrentlyRead
 import Read from "./components/navbar/navBarComponents/Read";
 import Favourites from "./components/navbar/navBarComponents/Favourites";
 import BookDetailPage from "./components/BookDetailPage";
+import Profile from "./components/Profile/Profile";
+import HomePage from "./components/navbar/navBarComponents/HomePage";
+import Login from "./components/authentication/Login";
 import { Route, Routes } from "react-router-dom";
 import { Context } from "./context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import Profile from "./components/Profile/Profile";
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -103,6 +105,8 @@ function App() {
               path="/"
               element={<MyBookshelf books={wantToReadBooks} />}
             ></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/home" element={<HomePage />}></Route>
             <Route
               path="/profile"
               element={

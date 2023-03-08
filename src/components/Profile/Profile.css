@@ -4,3 +4,10 @@
     color: #fff;
     margin: 0px;
 }
+
+.my-profile > hr {
+    border: 0;
+    height: 1px;
+    background-color: #5A5A5A;
+    margin: 0px;
+}
