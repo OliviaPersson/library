@@ -7,13 +7,33 @@ function Login() {
     password: "",
   });
 
+  const users = [
+    {
+      email: "admin1",
+      password: "12345678",
+    },
+    {
+      email: "admin2",
+      password: "012345678",
+    },
+  ];
+
+  const validateUser = () => {
+    const checkUser = users.find(
+      (obj) => obj.email === user.email && obj.password === user.password
+    );
+    checkUser
+      ? console.log("Login successful")
+      : console.log("Wrong email or password");
+  };
+
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+    validateUser(users);
   };
 
   return (
@@ -30,6 +50,7 @@ function Login() {
                 name="email"
                 value={user.email}
                 onChange={handleChange}
+                required
               />
               <label>Password</label>
               <input
@@ -38,6 +59,7 @@ function Login() {
                 name="password"
                 value={user.password}
                 onChange={handleChange}
+                required
               />
               <div className="login">
                 <button className="login-button" type="submit">
